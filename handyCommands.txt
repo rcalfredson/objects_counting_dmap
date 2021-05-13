@@ -1,0 +1,24 @@
+conda activate pytorchEnv
+P:
+cd robert\objects_counting_dmap
+python train.py -d egg-unshuffled -n FCRN_A -lr 0.0015 -e 1200 -hf 0.5 -vf 0.5 -rot --plot --batch_size 4 --config ^"P:\Robert\objects_counting_dmap\configs\shuffle_data_at_start_2021-02-23.json^"
+
+conda activate tfEnv
+P:
+cd robert\splinedist
+python train.py
+
+conda activate pytorchEnv
+P:
+cd p:\robert\objects_counting_dmap_lite
+
+python train.py -d egg-unshuffled -n FCRN_A -lr 0.001 -e 3000 -hf 0.5 -vf 0.5 -rot --plot --batch_size 4 --left_col_plots scatter --config P:\Robert\objects_counting_dmap\configs\presampleComparison_w_eggless_2021-03-16.json
+
+python train_experimental.py -d egg-patch-presample-compare-2021-03-22 -n FCRN_A -lr 0.0025 -e 3000 -hf 0.5 -vf 0.5 -rot --plot --batch_size 4 --left_col_plots scatter --config P:\Robert\objects_counting_dmap\configs\presampleComparison_w_eggless_2021-03-16.json
+
+python trainByBatchWin.py 5 "-d egg-fullsize-presample-compare-2021-03-22 -n FCRN_A -lr 0.001 -e 3000 -hf 0.5 -vf 0.5 -rot --plot --batch_size 4 --config ^"P:\Robert\objects_counting_dmap\configs\presampleComparison_dynamic_sample_from_fullsize_2021-03-22.json^""
+
+python train.py -d egg-fullsize-presample-compare-2021-03-22 -n FCRN_A -lr 0.001 -e 3000 -hf 0.5 -vf 0.5 --left_col_plots scatter --val_interval 1 -rot --plot --batch_size 4 --rand_samp_mult 20 --config P:\Robert\objects_counting_dmap\configs\presampleComparison_dynamic_sample_from_fullsize_2021-03-22.json
+
+command for dynamic sampling training: python trainByBatchLinux.py 8 "-d egg-fullsize-presample-compare-2021-03-22 -n FCRN_A -lr 0.0025 -e 150 -hf 0.5 -vf 0.5 --val_interval 20 -rot --plot --batch_size 4 --rand_samp_mult 20 --config /media/Synology3/Robert/objects_counting_dmap/configs/presampleComparison_dynamic_sample_from_fullsize_2021-03-22.json"
+

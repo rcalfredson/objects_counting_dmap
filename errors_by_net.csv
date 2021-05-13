@@ -1,0 +1,242 @@
+net name,experiment name,weighted error
+egg-patch-presample-compare-2021-03-22_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-24 04-54-28.751753,batch17-fcrn-small-dataset-presampling\egg_base_dir_errors,8.066230639988127
+egg-patch-presample-compare-2021-03-22_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-22 19-27-35.810545,batch17-fcrn-small-dataset-presampling\egg_base_dir_errors,8.56237067042893
+egg-patch-presample-compare-2021-03-22_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-23 21-25-27.034013,batch17-fcrn-small-dataset-presampling\egg_base_dir_errors,7.838881879452057
+egg-patch-presample-compare-2021-03-22_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-24 08-44-26.898662,batch17-fcrn-small-dataset-presampling\egg_base_dir_errors,7.3376532232065905
+egg-patch-presample-compare-2021-03-22_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-22 17-39-40.311500,batch17-fcrn-small-dataset-presampling\egg_base_dir_errors,7.4949417281324795
+egg-patch-presample-compare-2021-03-22_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-24 05-39-50.445365,batch17-fcrn-small-dataset-presampling\egg_base_dir_errors,10.205636536864132
+egg-patch-presample-compare-2021-03-22_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-24 01-32-18.599658,batch17-fcrn-small-dataset-presampling\egg_base_dir_errors,8.091353224763989
+egg-patch-presample-compare-2021-03-22_FCRN_A_150epochs_Yang-Lab-Dell2_2021-03-24 00-22-53.319710,batch17-fcrn-small-dataset-presampling\egg_base_dir_errors,7.081807827615079
+egg-patch-presample-compare-2021-03-22_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-22 23-02-06.604829,batch17-fcrn-small-dataset-presampling\egg_base_dir_errors,7.346237806569572
+egg-patch-presample-compare-2021-03-22_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-23 00-49-34.695524,batch17-fcrn-small-dataset-presampling\egg_base_dir_errors,7.041985379754415
+egg-patch-presample-compare-2021-03-22_FCRN_A_150epochs_Yang-Lab-Dell2_2021-03-24 07-21-44.458549,batch17-fcrn-small-dataset-presampling\egg_base_dir_errors,6.793237148873684
+egg-patch-presample-compare-2021-03-22_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-22 21-14-55.526717,batch17-fcrn-small-dataset-presampling\egg_base_dir_errors,9.03377085476435
+egg-patch-presample-compare-2021-03-22_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-24 01-04-22.269723,batch17-fcrn-small-dataset-presampling\egg_base_dir_errors,8.822490398303344
+egg-patch-presample-compare-2021-03-22_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-23 21-15-12.611667,batch17-fcrn-small-dataset-presampling\egg_base_dir_errors,8.429979796140634
+egg-patch-presample-compare-2021-03-22_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-24 09-47-38.370134,batch17-fcrn-small-dataset-presampling\egg_base_dir_errors,7.62692698999335
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-24 21-30-26.036609,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,5.270715853749097
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-25 05-53-25.533325,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,5.538758745711974
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-24 15-45-32.538271,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,7.045442518168737
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-25 08-28-25.724183,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,7.112921218440476
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-25 01-09-17.637935,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,6.89157230797626
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-24 23-54-14.322593,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,10.166845968096093
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-24 22-42-21.070863,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,5.646129277515473
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-24 21-29-45.562872,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,9.203595603802393
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-24 20-18-39.606469,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,6.460719854908454
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-25 01-06-02.796839,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,9.348680294292418
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-24 16-57-22.076388,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,5.719621727627094
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-24 19-06-40.548757,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,5.8722639613446574
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-24 14-33-43.879198,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,7.330152728252688
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-25 04-41-34.482199,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,7.328393834151742
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-25 03-29-52.260122,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,8.527089578872278
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-25 04-48-50.979034,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,8.60114741228095
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-25 02-17-56.608612,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,7.67425017853716
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-24 17-44-57.100641,batch21-fcrn-small-dataset-dynamic-postfix-4\egg_base_dir_errors,8.058253360437444
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_3000epochs_Yang-Lab-Dell3_2021-03-24 19-36-42.063780,batch22-fcrn-small-dataset-dynamic-short-epoch-5\egg_base_dir_errors,8.791674416882481
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_3000epochs_Yang-Lab-Dell3_2021-03-24 23-26-24.336169,batch22-fcrn-small-dataset-dynamic-short-epoch-5\egg_base_dir_errors,9.58179693514467
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_3000epochs_Yang-Lab-Dell3_2021-03-25 07-04-16.153040,batch22-fcrn-small-dataset-dynamic-short-epoch-5\egg_base_dir_errors,6.565381701933786
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_3000epochs_Yang-Lab-Dell2_2021-03-25 04-16-53.442467,batch22-fcrn-small-dataset-dynamic-short-epoch-5\egg_base_dir_errors,7.659376641501344
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_3000epochs_Yang-Lab-Dell3_2021-03-25 03-15-42.508892,batch22-fcrn-small-dataset-dynamic-short-epoch-5\egg_base_dir_errors,7.566679506372125
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_3000epochs_Yang-Lab-Dell5_2021-03-25 00-58-55.860431,batch22-fcrn-small-dataset-dynamic-short-epoch-5\egg_base_dir_errors,7.6038891784923
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_3000epochs_Yang-Lab-Dell4_2021-03-24 16-01-57.057121,batch22-fcrn-small-dataset-dynamic-short-epoch-5\egg_base_dir_errors,7.918891783611868
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_3000epochs_Yang-Lab-Dell4_2021-03-25 00-16-38.601292,batch22-fcrn-small-dataset-dynamic-short-epoch-5\egg_base_dir_errors,6.912678375270049
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_3000epochs_Yang-Lab-Dell5_2021-03-25 07-57-43.102185,batch22-fcrn-small-dataset-dynamic-short-epoch-5\egg_base_dir_errors,7.863177974297373
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_3000epochs_Yang-Lab-Dell4_2021-03-25 08-30-57.752653,batch22-fcrn-small-dataset-dynamic-short-epoch-5\egg_base_dir_errors,6.610843340486106
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_3000epochs_Yang-Lab-Dell3_2021-03-24 15-47-14.774062,batch22-fcrn-small-dataset-dynamic-short-epoch-5\egg_base_dir_errors,7.1620415198679925
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_3000epochs_Yang-Lab-Dell4_2021-03-25 04-23-45.623343,batch22-fcrn-small-dataset-dynamic-short-epoch-5\egg_base_dir_errors,5.72644512297997
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_3000epochs_Yang-Lab-Dell2_2021-03-24 20-06-22.647374,batch22-fcrn-small-dataset-dynamic-short-epoch-5\egg_base_dir_errors,6.533290348001709
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_3000epochs_Yang-Lab-Dell4_2021-03-24 20-09-15.484048,batch22-fcrn-small-dataset-dynamic-short-epoch-5\egg_base_dir_errors,6.748438011360896
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell5_2021-03-26 05-48-06.101038,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,9.329701002145317
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-25 19-41-18.738740,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,7.892720387379433
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell2_2021-03-26 00-33-10.069637,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,6.4831972868358
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-26 04-13-19.033693,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,7.021923420685533
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-26 00-11-37.553068,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,6.968121185694534
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-26 07-45-31.225091,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,5.4544970169705485
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-25 20-50-03.704835,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,5.127070453307546
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-26 05-26-33.314685,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,7.442873805432212
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-25 22-07-39.359218,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,7.0458504521424254
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-26 08-13-29.159701,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,8.58129507960424
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell5_2021-03-25 23-53-50.545425,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,8.271403666150134
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell2_2021-03-26 07-44-03.687996,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,7.16277845789968
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-25 23-20-41.732766,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,7.999596080749883
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-26 03-33-03.221760,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,7.04729096501794
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-26 00-48-10.172909,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,8.918244702201507
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-25 20-54-25.962493,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,7.1941945172906285
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-26 06-55-12.281860,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,8.113434186400303
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-25 18-28-14.066972,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,6.4040801055846455
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-26 01-46-56.072662,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,6.157179181730245
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-25 20-59-41.673416,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,7.195699254985234
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-26 00-35-00.874862,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,7.664119790595272
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-26 04-30-59.254012,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,9.205039446361862
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-25 21-03-03.903140,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,5.798803984691419
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-26 04-10-17.364260,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,5.681924728713916
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-26 00-33-48.476396,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,4.767339903450118
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-26 03-00-01.244407,batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\egg_base_dir_errors,7.019210694932941
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-29 15-25-22.337074,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,6.949692339843357
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-29 22-02-46.244433,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,7.431658839580807
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-30 09-06-39.791705,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,6.553105003239596
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-29 20-15-45.780985,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,7.027953192212988
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-29 14-20-15.026308,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,7.11494489983309
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell2_2021-03-30 08-18-06.431356,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,5.777314643175316
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-30 01-44-02.651037,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,7.334670456621429
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-30 04-34-10.832521,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,7.286699062437566
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-29 13-00-06.981523,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,6.213378196582294
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-29 17-48-42.926722,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,5.587018557021074
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-29 11-47-16.522725,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,6.293037677908668
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-29 14-04-18.175567,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,5.707168273366161
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-29 18-04-02.263702,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,7.707027104944012
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-30 00-58-55.908720,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,7.819666488107588
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-30 06-50-00.440521,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,7.113869723213242
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-29 14-13-41.344443,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,6.731074628183195
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-29 22-40-51.742295,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,6.18006078086254
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell2_2021-03-29 17-51-04.384660,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,7.523837455892561
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-29 17-27-10.824421,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,7.543152552529804
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-29 16-37-51.939947,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,5.797346468498901
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-30 03-29-49.068400,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,7.056963285747139
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-29 14-12-48.647037,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,6.949759007069187
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-30 08-09-16.473412,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,5.740700573454366
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-30 05-25-05.386944,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,5.327758064492775
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell2_2021-03-30 01-07-03.561742,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,6.267652794299965
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-29 20-49-07.892553,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,6.150353815629471
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-29 19-03-08.958705,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,6.776236634198899
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-29 21-28-22.408644,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,7.1779636389809145
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-29 21-23-36.770323,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,8.043821090479634
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-29 17-50-31.947164,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,8.420387676922255
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-30 00-09-57.317896,batch25-fcrn-small-dataset-gaussian-bndry-reflect\egg_base_dir_errors,9.905763687033451
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-31 07-12-56.503756,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,8.751454122628639
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-30 21-43-04.425060,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,6.7496509914188305
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-30 15-24-51.287436,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,7.097433973128573
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-31 01-04-04.293592,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,8.835747880039746
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-31 03-51-06.037121,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,6.545707624754928
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-30 23-53-58.972449,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,6.936344240546763
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-31 01-27-02.183020,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,7.0724395289732565
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-30 21-28-30.960785,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,6.408537033288826
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-30 22-41-11.756053,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,6.636970900250642
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-30 17-50-24.086588,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,6.5573335555511
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-31 01-06-40.196114,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,6.916257284866111
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-31 08-54-48.715320,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,6.256679030019216
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell2_2021-03-31 04-36-57.293572,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,8.168704068159512
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-30 17-53-02.469231,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,5.389916412910769
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-30 17-44-52.738392,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,7.267934545235657
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-31 04-39-28.466201,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,5.717029383264957
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-30 19-03-08.920698,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,6.7632832499357916
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-30 20-15-47.526339,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,6.6884109161030025
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell2_2021-03-30 21-26-23.861302,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,8.297661170922574
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-30 16-37-44.088587,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,6.482767488833148
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-31 02-19-29.829030,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,6.846117099593461
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-30 21-28-36.013932,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,7.345840376655843
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-31 05-10-14.089531,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,7.238112906983952
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-30 21-07-03.382486,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,5.342172635387707
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-31 08-14-50.878752,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,5.928516562268709
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-31 00-28-42.918320,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,7.093256936660467
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-30 17-59-12.255293,batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\egg_base_dir_errors,8.46543929147833
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-01 00-14-28.315066,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,6.9295328332705095
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-01 01-27-08.157942,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,6.543433725390596
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-31 19-23-44.445207,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,8.583910284532648
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell2_2021-03-31 23-01-14.247916,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,9.74574467389332
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-31 18-11-30.579028,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,6.267504528394863
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell2_2021-04-01 06-18-39.488423,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,7.183773368337185
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-31 19-16-43.855931,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,5.837744882508746
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-31 19-24-09.322291,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,6.027167180980087
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-31 23-35-59.724063,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,6.693355917794346
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-31 16-58-47.738311,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,7.904933027868438
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-03-31 22-58-52.448710,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,8.963637908429355
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-04-01 07-03-34.483487,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,6.509696310245646
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-03-31 22-40-48.166042,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,8.714526828865914
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-04-01 08-47-13.584715,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,10.17952129337351
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-01 03-52-22.881682,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,7.64611549639406
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-31 21-49-22.040371,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,8.368622232180796
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-04-01 02-34-03.857042,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,5.917827226815443
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-04-01 06-09-06.641878,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,7.05621231841848
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-31 23-01-53.920259,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,6.709046199744885
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-04-01 03-20-17.817467,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,8.248429097733375
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-04-01 02-03-14.162958,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,6.882708426406126
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-03-31 20-36-47.474568,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,6.261746287606863
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-01 02-39-49.103400,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,6.646081600949013
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-03-31 19-36-56.576024,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,8.609178164794963
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-04-01 05-26-24.553871,batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\egg_base_dir_errors,7.552373700339799
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-04-01 14-48-58.428662,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,7.937840009394135
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-04-01 17-58-00.437411,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,6.287925746711539
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-04-01 18-49-22.479294,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,5.861187578437455
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-01 23-23-16.861524,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,6.6743266043462945
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-04-01 21-30-39.001318,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,5.444867406370986
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-04-01 18-22-32.260810,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,5.615761748786164
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-01 17-02-39.291654,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,5.552061085808268
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell2_2021-04-02 01-53-09.623448,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,7.36614708631808
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-01 15-46-30.967505,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,6.602211740460396
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-04-02 01-02-56.918475,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,5.620585471052992
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-01 13-14-21.713109,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,6.4931654120445295
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-04-02 05-44-23.723199,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,7.748028037058206
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell2_2021-04-01 18-18-05.419088,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,6.373300454877569
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-01 18-18-46.912089,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,6.575436226293474
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-04-01 22-09-51.692223,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,6.262580301957517
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-01 20-50-57.093339,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,7.656747310166285
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-04-01 14-25-27.289326,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,6.702587902313836
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-01 19-34-54.191040,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,7.873267992602958
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-04-02 04-34-22.568293,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,7.107092527131863
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-04-01 23-04-48.282788,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,6.202776574101236
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell2_2021-04-02 09-28-36.774210,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,6.92374526799129
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-04-02 08-05-34.161794,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,5.936771475679074
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-04-01 14-35-27.189798,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,6.879503565785062
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-01 22-07-07.347203,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,5.989336160994462
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-01 14-30-30.654186,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,6.942075162785534
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-04-02 07-02-17.362937,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,6.713305250434329
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-04-02 01-57-08.207300,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,6.142128081379018
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-04-02 09-31-39.078727,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,7.931156975092095
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_NZXT-U_2021-04-02 03-03-45.022740,batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\egg_base_dir_errors,7.8157807876445125
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-03 02-50-29.325216,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,9.61279693166809
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell2_2021-04-03 16-42-46.508243,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,9.622379070925827
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-03 00-18-19.851269,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,9.58376176046522
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-04-03 11-38-58.925535,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,8.248326658711969
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-04-03 08-08-29.249982,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,9.026595790208285
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-02 21-46-15.660105,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,8.096285484267309
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-04-03 05-21-18.351451,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,8.777348095389346
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-04-03 18-43-19.617216,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,9.645259744718237
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell2_2021-04-04 07-57-59.888887,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,9.458401143713875
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell2_2021-04-03 09-07-03.035471,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,8.986175271305626
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-04-03 01-07-16.028291,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,9.392847334714801
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-04-03 09-08-11.264845,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,9.795557999123613
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell2_2021-04-05 06-49-28.411686,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,8.722820381566544
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-03 04-06-22.926960,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,8.589877132722393
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-03 05-22-22.513846,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,9.092406412231412
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell2_2021-04-03 01-33-01.099225,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,9.294010380834518
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell4_2021-04-03 16-42-33.481106,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,9.81386598360029
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-02 19-14-15.703825,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,8.793030928940976
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell3_2021-04-03 22-14-50.120501,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,9.572672098754325
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-03 01-34-19.741295,batch29-fcrn-small-dataset-gaussian-no-rot\egg_base_dir_errors,10.02297499002981
+6,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,7.3244779001948075
+25,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,8.050251652800695
+14,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,6.0037270894683905
+1,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,7.764280076995392
+24,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,8.398040731935094
+15,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,7.146746116900442
+3,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,6.577280819663274
+23,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,7.301768811456162
+5,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,6.478682087491784
+20,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,6.613303804504591
+22,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,7.018098342721426
+0,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,7.768590243755976
+8,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,7.395648304736254
+4,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,5.877875108312097
+17,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,7.5391360234967015
+2,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,6.414439220857241
+10,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,6.922937110271904
+18,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,5.658154899212513
+21,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,8.652566528679573
+13,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,7.641572654928366
+9,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,7.037649677524964
+19,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,6.067450692420187
+11,batch30-fcrn-small-dataset-mae-loss-function\egg_base_dir_errors,6.613560076172797
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-06 13-13-05.210419,batch31-fcrn-small-dataset-mae-squared-loss-function\egg_base_dir_errors,8.799478122931642
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-06 15-08-21.013567,batch31-fcrn-small-dataset-mae-squared-loss-function\egg_base_dir_errors,9.356350347154208
+egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_150epochs_Yang-Lab-Dell8_2021-04-06 14-10-41.247758,batch31-fcrn-small-dataset-mae-squared-loss-function\egg_base_dir_errors,8.957198133648728
+egg-fullsize-pt-presample-compare-2021-03-23_UNet_150epochs_Yang-Lab-Dell3_2021-04-07 23-33-54.969241,batch33-fcrn-small-dataset-unet-backbone-mae-loss\egg_base_dir_errors,7.856625683646337
+egg-fullsize-pt-presample-compare-2021-03-23_UNet_150epochs_Yang-Lab-Dell4_2021-04-07 23-45-44.268191,batch33-fcrn-small-dataset-unet-backbone-mae-loss\egg_base_dir_errors,6.79280761439456
+egg-fullsize-pt-presample-compare-2021-03-23_UNet_150epochs_Yang-Lab-Dell8_2021-04-07 15-18-58.927644,batch33-fcrn-small-dataset-unet-backbone-mae-loss\egg_base_dir_errors,6.11113102528028
+egg-fullsize-pt-presample-compare-2021-03-23_UNet_150epochs_Yang-Lab-Dell8_2021-04-07 23-29-35.525775,batch33-fcrn-small-dataset-unet-backbone-mae-loss\egg_base_dir_errors,7.3550511048093705
+egg-fullsize-pt-presample-compare-2021-03-23_UNet_150epochs_Yang-Lab-Dell8_2021-04-08 04-56-48.196533,batch33-fcrn-small-dataset-unet-backbone-mae-loss\egg_base_dir_errors,6.805270664209086
+egg-fullsize-pt-presample-compare-2021-03-23_UNet_150epochs_Yang-Lab-Dell8_2021-04-07 20-46-09.131310,batch33-fcrn-small-dataset-unet-backbone-mae-loss\egg_base_dir_errors,6.997767366916255
+egg-fullsize-pt-presample-compare-2021-03-23_UNet_150epochs_Yang-Lab-Dell2_2021-04-08 04-36-12.446772,batch33-fcrn-small-dataset-unet-backbone-mae-loss\egg_base_dir_errors,6.992791357291308
+egg-fullsize-pt-presample-compare-2021-03-23_UNet_150epochs_Yang-Lab-Dell8_2021-04-07 18-02-37.232410,batch33-fcrn-small-dataset-unet-backbone-mae-loss\egg_base_dir_errors,6.86677719225839
+egg-fullsize-pt-presample-compare-2021-03-23_UNet_150epochs_Yang-Lab-Dell8_2021-04-08 02-13-09.196841,batch33-fcrn-small-dataset-unet-backbone-mae-loss\egg_base_dir_errors,8.633709602849995
+egg-fullsize-pt-presample-compare-2021-03-23_UNet_150epochs_Yang-Lab-Dell8_2021-04-08 07-40-26.425597,batch33-fcrn-small-dataset-unet-backbone-mae-loss\egg_base_dir_errors,8.785485665580335

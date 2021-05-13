@@ -1,0 +1,23 @@
+# run FCRN training
+conda activate pytorchenv
+P:
+cd robert\objects_counting_dmap
+python train.py -d egg-fullsize-pt-presample-compare-2021-03-23 -n FCRN_A -lr 0.0025 -e 3000 -hf 0.5 -vf 0.5 --val_interval 20 -rot --plot --left_col_plots scatter --batch_size 4 --rand_samp_mult 1  --config P:\Robert\objects_counting_dmap\configs\presampleComparison_dynamic_sample_mae_loss_2021-04-05.json
+
+# run SplineDist training
+conda activate pytorchenv
+P:
+cd robert\splinedtorch
+python train.py --config configs\fcrn_backbone.json --plot --export_at_end --val_interval 2
+
+python train_experimental.py -d egg-fullsize-pt-presample-compare-2021-03-23 -n UNet -lr 0.0025 -e 150 -hf 0.5 -vf 0.5 --val_interval 2 -rot --plot --batch_size 4 --rand_samp_mult 20 --config P:\Robert\objects_counting_dmap\configs\presampleComparison_dynamic_sample_mae_loss_2021-04-05.json
+
+python eval_via_pt_data.py "P:\Robert\objects_counting_dmap\egg_source\heldout_robert_WT_5" "saved_models/splinedist_2021-04-05 17-43-46.063154_best_epoch258_Yang-Lab-Dell5*.pth"
+
+cmake -G "MSYS Makefiles" --parallel 6 -D CMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++.exe -D WITH_OPENMP=ON -D CMAKE_MAKE_PROGRAM=make.exe ..
+
+# testing counting scripts
+conda activate pytorchenv
+C:
+cd counting-3
+python scripts/export_images_for_amzn.py "P:\Egg images_9_3_2020\WT_1\egg_count_labels_robert.pickle" "P:\Egg images_9_3_2020\WT_3\egg_count_labels_dorsa.pickle" "C:\Users\Tracking\counting-3\temp"

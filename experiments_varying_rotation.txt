@@ -1,0 +1,5 @@
+batch25-fcrn-small-dataset-gaussian-bndry-reflect
+batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip
+batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips
+batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience
+batch29-fcrn-small-dataset-gaussian-no-rot

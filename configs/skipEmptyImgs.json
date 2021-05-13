@@ -1,0 +1,7 @@
+{
+    "rlrParams": {
+        "factor": 0.5,
+        "patience": 40
+    },
+    "skipEmpties": true
+}

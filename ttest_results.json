@@ -1,0 +1,72 @@
+{
+    "batch25-fcrn-small-dataset-gaussian-bndry-reflect_vs_batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip": [
+        -1.3271602669942761,
+        0.1900231722230418,
+        31,
+        27,
+        "ns"
+    ],
+    "batch25-fcrn-small-dataset-gaussian-bndry-reflect_vs_batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips": [
+        -1.8787242101398889,
+        0.0667622105677376,
+        31,
+        25,
+        "ns"
+    ],
+    "batch25-fcrn-small-dataset-gaussian-bndry-reflect_vs_batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience": [
+        -1.5695925474593317,
+        0.12222081312064924,
+        31,
+        29,
+        "ns"
+    ],
+    "batch25-fcrn-small-dataset-gaussian-bndry-reflect_vs_batch29-fcrn-small-dataset-gaussian-no-rot": [
+        -11.987039513979175,
+        5.894908813318786e-16,
+        31,
+        20,
+        "****"
+    ],
+    "batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip_vs_batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips": [
+        -0.6985077226119992,
+        0.4883281468514532,
+        27,
+        25,
+        "ns"
+    ],
+    "batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip_vs_batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience": [
+        -0.28666286570639077,
+        0.7754693666358872,
+        27,
+        29,
+        "ns"
+    ],
+    "batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip_vs_batch29-fcrn-small-dataset-gaussian-no-rot": [
+        -9.911607225575013,
+        6.863135771784019e-13,
+        27,
+        20,
+        "****"
+    ],
+    "batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips_vs_batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience": [
+        0.4225542864216767,
+        0.6744547531409919,
+        25,
+        29,
+        "ns"
+    ],
+    "batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips_vs_batch29-fcrn-small-dataset-gaussian-no-rot": [
+        -7.817277596416303,
+        1.3262228713516282e-09,
+        25,
+        20,
+        "****"
+    ],
+    "batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience_vs_batch29-fcrn-small-dataset-gaussian-no-rot": [
+        -9.15116784427453,
+        5.260041277324335e-12,
+        29,
+        20,
+        "****"
+    ]
+}

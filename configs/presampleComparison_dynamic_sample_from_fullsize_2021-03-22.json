@@ -1,0 +1,11 @@
+{
+    "rlrParams": {
+        "factor": 0.5,
+        "patience": 200
+    },
+    "sampleMode": "dynamic",
+    "skipEmpties": false,
+    "randomPatchSizes": false,
+    "zoomMin": null,
+    "zoomMax": null
+}

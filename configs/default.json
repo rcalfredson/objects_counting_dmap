@@ -1,0 +1,8 @@
+{
+    "skipEmpties": false,
+    "randomPatchSizes": false,
+    "zoomMin": null,
+    "zoomMax": null,
+    "sampleMode": "pre",
+    "loss": "mse"
+}

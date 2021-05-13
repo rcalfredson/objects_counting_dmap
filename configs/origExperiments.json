@@ -1,0 +1,6 @@
+{
+    "rlrParams": {
+        "factor": 0.25,
+        "patience": 10
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "rlrParams": {
+        "factor": 0.5,
+        "patience": 200
+    },
+    "skipEmpties": false,
+    "train_proportion": 0.79
+}
