@@ -1,17 +1,12 @@
 """PyTorch dataset for HDF5 files generated with `get_data.py`."""
-import elasticdeform
 import os
 import random
-
-import matplotlib.pyplot as plt
-from scipy import ndimage
 from rotation import rotate_point
 
 import cv2
 import h5py
 from PIL import Image
-from scipy.ndimage.filters import gaussian_filter, maximum_filter, minimum_filter
-from scipy.ndimage.morphology import generate_binary_structure
+from scipy.ndimage.filters import gaussian_filter
 from skimage.feature.peak import peak_local_max
 import torch
 import numpy as np
@@ -49,12 +44,7 @@ def rotate_label(label, rotationAngle):
             pt, [ln / 2 for ln in label.shape[:2]], -np.pi * rotationAngle / 180
         )
         rounded_coords = [round(coord) for coord in new_pt]
-        if all(
-            [
-                coord < label.shape[i] and coord >= 0
-                for i, coord in enumerate(rounded_coords)
-            ]
-        ):
+        if all([coord < label.shape[i] and coord >=0 for i, coord in enumerate(rounded_coords)]):
             reconstructed_label[rounded_coords[0], rounded_coords[1]] = 100
     return reconstructed_label
 
@@ -91,16 +81,16 @@ def augment_with_zoom(img, lbl, zoom_level, debug=False):
         resized_lbl, min_distance=2, threshold_abs=0.78, indices=False
     ).astype(np.float32)
     if debug:
-        cv2.imshow("orig img", img.T)
+        cv2.imshow("orig img", img)
         cv2.imshow("orig lbl", lbl)
         cv2.imshow("resized", resized_lbl)
     resized_lbl = 100 * peak_positions
     resized_lbl = gaussian_filter(resized_lbl, sigma=(1, 1), order=0)
     if debug:
-        cv2.imshow("resized img:", resized_img.T)
+        cv2.imshow("resized img:", resized_img)
         cv2.imshow("resampled:", resized_lbl)
+        print("zoom level:", zoom_level)
         cv2.waitKey(0)
-    print("zoom level:", zoom_level)
     return resized_img.T, resized_lbl
 
 
@@ -178,66 +168,16 @@ def chooseRandomRegions(
             refresh_zoom_level()
             x_origin = np.random.randint(0, el[0].shape[-1] - patch_wd)
             y_origin = np.random.randint(0, el[0].shape[1] - patch_ht)
-            rotation_angle = np.random.uniform(-180, 180)
-            # print("shape of first el:", el[0].shape)
-            # print("and second el:", el[1].shape)
-            img_patch, label_patch = elasticdeform.deform_random_grid(
-                [np.transpose(el[0], (1, 2, 0)), np.transpose(el[1], (1, 2, 0))],
-                sigma=0,
-                points=3,
-                rotate=rotation_angle,
-                crop=[
-                    slice(y_origin, y_origin + patch_ht),
-                    slice(x_origin, x_origin + patch_wd),
-                ],
-                order=[3, 1],
-                axis=(0, 1),
-            )
-            cv2.imshow('original label patch:', cv2.resize(label_patch, (0, 0), fx=2, fy=2))
-            labeled_points = list(zip(*np.where(label_patch >=20 )[:2]))
-            previous_pt = [-1, -1]
-            filtered_pts = []
-            for pt in labeled_points:
-                if abs(pt[0] - previous_pt[0]) <= 1 and abs(pt[1] - previous_pt[1]) <= 1:
-                    if np.random.random() < 0.5:
-                        filtered_pts = filtered_pts[:-1]
-                        filtered_pts.append(list(pt))
-                else:
-                    filtered_pts.append(list(pt))
-                previous_pt = pt
-            # cv2.imshow("img patch", cv2.resize(img_patch, (0, 0), fx=2, fy=2))
-            label_patch_new = np.zeros(label_patch.shape)
-            print('labeled points? ', labeled_points)
-            print('filtered points:', filtered_pts)
-            # print(list(zip(*filtered_pts)))
-            pts_to_draw = tuple(zip(*filtered_pts))
-            if len(pts_to_draw) > 0:
-                label_patch_new[tuple(zip(*filtered_pts))] = 100
-            label_patch = label_patch_new
-            # print("img patch shape:", img_patch.shape)
-            # print('label patch shape:', label_patch.shape)
-            # cv2.imshow('whole', np.transpose(el[1], (1, 2, 0)))
-            cv2.imshow("label patch", cv2.resize(label_patch, (0, 0), fx=2, fy=2))
-            cv2.imshow("label patch new", cv2.resize(label_patch_new, (0, 0), fx=2, fy=2))
-            # plt.figure()
-            # plt.imshow(label_patch)
-            
-            plt.show()
-            cv2.waitKey (0)
-            # img_patch = img_patch.T
-            # cv2.imshow("img patch after transpose", img_patch)
-            # cv2.waitKey(0)
-            # label_patch = el[1][
-            # :, y_origin : y_origin + patch_ht, x_origin : x_origin + patch_wd
-            # ]
-
+            label_patch = el[1][
+                :, y_origin : y_origin + patch_ht, x_origin : x_origin + patch_wd
+            ]
             if skipEmpties and np.count_nonzero(label_patch) == 0:
                 continue
-            # img_patch = el[0][
-            # :, y_origin : y_origin + patch_ht, x_origin : x_origin + patch_wd
-            # ]
-            # label_patch = label_patch.T
-            # img_patch, label_patch = rotateInCollateStep(img_patch, label_patch)
+            img_patch = el[0][
+                :, y_origin : y_origin + patch_ht, x_origin : x_origin + patch_wd
+            ]
+            label_patch = label_patch.T
+            img_patch, label_patch = rotateInCollateStep(img_patch, label_patch)
             if applyGaussian:
                 label_patch = gaussian_filter(
                     label_patch, sigma=(1, 1, 0), order=0, mode="reflect"
@@ -254,14 +194,9 @@ def chooseRandomRegions(
                 zoomed_label = zoomed_label[:final_ht, :final_wd]
             elif zoomed_patch.shape[1] < final_ht:
                 zoomed_patch = (zoomed_patch * 255).astype(np.uint8)
-                bckgnd = background_color(zoomed_patch)
-                print('what is size?', size)
-                zoomed_patch_new = np.full((size, size, 3), fill_value=bckgnd)
-                print('shape of zoomed_patch_new?', zoomed_patch_new.shape)
-                print('size of original zoomed patch:', zoomed_patch.shape)
+                bckgnd = background_color(zoomed_patch.T)
+                zoomed_patch_new = np.full((size, size, 3), fill_value=bckgnd).T
                 zoomed_patch_new[
-
-
                     :, : zoomed_patch.shape[1], : zoomed_patch.shape[-1]
                 ] = zoomed_patch
                 zoomed_patch = zoomed_patch_new.astype(np.float32) / 255
@@ -275,13 +210,11 @@ def chooseRandomRegions(
                 print("shape of zoomed patch:", zoomed_patch.shape)
                 print("shape of zoomed label:", zoomed_label.shape)
                 print("sum of zoomed label: %.15f" % (np.sum(zoomed_label) / 100.0))
-                cv2.imshow("debug", cv2.resize(zoomed_patch, (0, 0), fx=2, fy=2))
-                cv2.imshow(
-                    "zoomed label", cv2.resize(zoomed_label, (0, 0), fx=2, fy=2)
-                )  # cv2.resize(zoomed_label, (0, 0), fx=2, fy=2))
+                cv2.imshow("debug", cv2.resize(zoomed_patch.T, (0, 0), fx=2, fy=2))
+                cv2.imshow("zoomed label", cv2.resize(zoomed_label, (0, 0), fx=2, fy=2)) # cv2.resize(zoomed_label, (0, 0), fx=2, fy=2))
                 cv2.waitKey(0)
             resizedImgs[region_counter * numPatches + counter] = torch.from_numpy(
-                zoomed_patch.T
+                zoomed_patch
             )
 
             resizedLabels[region_counter * numPatches + counter] = torch.from_numpy(
@@ -449,7 +382,7 @@ class MultiDimH5Dataset(DatasetWithAugs):
         """Return next sample (randomly flipped)."""
         # if both flips probabilities are zero return an image and a label
         if not (self.horizontal_flip or self.vertical_flip):
-            return self.h5[self.images[index]][0], self.h5[self.labels[index]][0]#, list(self.h5.keys())[index]
+            return self.h5[self.images[index]][0], self.h5[self.labels[index]][0]
 
         # axis = 1 (vertical flip), axis = 2 (horizontal flip)
         axis_to_flip = []
@@ -465,17 +398,13 @@ class MultiDimH5Dataset(DatasetWithAugs):
         if self.rand_rotate:
             image = (255 * image.T).astype(np.uint8)
             final_results = self.__randrotate__(
-                image, np.flip(self.h5[self.labels[index]][0], axis=axis_to_flip).copy(),
-            ) + (list(self.h5.keys())[index], )
+                image, np.flip(self.h5[self.labels[index]][0], axis=axis_to_flip).copy()
+            )
         else:
             final_results = (
                 image,
                 np.flip(self.h5[self.labels[index]][0], axis=axis_to_flip).copy(),
-                list(self.h5.keys())[index]
             )
-        print('returning final results of')
-        print(final_results)
-        input()
         return final_results
 
 

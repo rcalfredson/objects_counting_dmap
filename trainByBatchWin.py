@@ -28,7 +28,7 @@ opts = options()
 
 def run_one_training(existing_model=None):
     command_being_called = (
-        'start /w %%windir%%\\System32\\cmd.exe "/K" C:\\Users\\Tracking\\anaconda3\\Scripts\\activate.bat C:\\Users\\Tracking\\anaconda3 ^& conda activate %s ^& %s: ^& cd Robert\\objects_counting_dmap ^& cd ^& python train.py --export_at_end %s%s'#^& exit'
+        'start /w %%windir%%\\System32\\cmd.exe "/K" C:\\Users\\Tracking\\anaconda3\\Scripts\\activate.bat C:\\Users\\Tracking\\anaconda3 ^& conda activate %s ^& %s: ^& cd Robert\\objects_counting_dmap ^& cd ^& python train.py --export_at_end %s%s ^& exit'
         % (
             condaEnv,
             driveLetter,

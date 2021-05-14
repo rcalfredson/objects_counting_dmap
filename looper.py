@@ -49,6 +49,9 @@ class Looper:
         self.validation = validation
         self.plots = plots
         self.running_loss = []
+        if self.loss_tp == "dual":
+            self.running_loss_by_pixel = []
+            self.running_loss_by_egg_ct = []
         self.running_mean_abs_err = []
         if plots is not None:
             assert (
@@ -61,6 +64,13 @@ class Looper:
         )
 
     def set_up_loss(self):
+        def mean_abs_error_loss(result, label):
+            errors = []
+            for true, predicted in zip(label, result):
+                actual = torch.sum(true)
+                errors.append(torch.abs(actual - torch.sum(predicted)) / 100 / 4 / 5)
+            return torch.mean(torch.stack(errors))
+
         if self.loss_tp == "mse":
             self.loss = torch.nn.MSELoss()
         elif self.loss_tp == "mae":
@@ -68,16 +78,17 @@ class Looper:
             # def mean_abs_error_loss(abs_errors):
             #     return torch.mean(abs_errors)
 
-            def mean_abs_error_loss(result, label):
-                errors = []
-                for true, predicted in zip(label, result):
-                    actual = torch.sum(true)
-                    errors.append(
-                        torch.abs(actual - torch.sum(predicted)) / 100 / 4 / 5
-                    )
-                return torch.mean(torch.stack(errors))
-
             self.loss = mean_abs_error_loss
+        elif self.loss_tp == "dual":
+            self.loss_mse = torch.nn.MSELoss()
+
+            def dual_loss(result, label):
+                loss_1 = mean_abs_error_loss(result, label)
+                loss_2 = self.loss_mse(result, label)
+                loss_sum = (0.5 * loss_1).add(loss_2 * 0.5)
+                return loss_sum, loss_1, loss_2
+
+            self.loss = dual_loss
 
     def run(self, i=None):
         """Run a single epoch loop.
@@ -92,6 +103,9 @@ class Looper:
         self.abs_err = []
         self.mean_err = []
         self.running_loss.append(0)
+        if self.loss_tp == "dual":
+            self.running_loss_by_pixel.append(0)
+            self.running_loss_by_egg_ct.append(0)
 
         # set a proper mode: train or eval
         self.network.train(not self.validation)
@@ -144,12 +158,18 @@ class Looper:
             label = label[:, :, : label.shape[-2] - vDiff, : label.shape[-1] - hDiff]
 
             # calculate loss and update running loss
-            if self.loss_tp == "mse":
+            if self.loss_tp != "dual":
                 loss = self.loss(result, label)
-            elif self.loss_tp == "mae":
-                # abs_err_for_batch = torch.tensor(abs_err_for_batch, requires_grad=True)
-                loss = self.loss(result, label)
-            # print("what is the loss function result?", loss)
+            else:
+                loss_results = self.loss(result, label)
+                loss = loss_results[0]
+                self.running_loss_by_egg_ct[-1] += (
+                    image.shape[0] * loss_results[1].item() / self.size
+                )
+                self.running_loss_by_pixel[-1] += (
+                    image.shape[0] * loss_results[2].item() / self.size
+                )
+
             self.running_loss[-1] += image.shape[0] * loss.item() / self.size
 
             # update weights if in train mode
@@ -169,7 +189,6 @@ class Looper:
         # print("how many steps in the epoch?", counter)
 
         return self.mean_abs_err
-        # if the loss increases by a magnitude of about 100, it seems reasonable to me that the learning rate might have to decrease by a similar amount for the predictions to come out similarly. Ultimately, this proved to be the case, because I started seeing good results after having decreased learning rate to the level 1.25e-8.
 
     def update_errors(self):
         """
@@ -208,7 +227,19 @@ class Looper:
         self.plots[1].set_xlabel("Epoch")
         self.plots[1].set_ylabel("Loss")
         self.plots[1].set_ylim((0, 0.2))
-        self.plots[1].plot(epochs, self.running_loss)
+        self.plots[1].plot(
+            epochs,
+            self.running_loss,
+            label="Loss" if self.loss_tp == "dual" else None,
+        )
+        if self.loss_tp == "dual":
+            self.plots[1].plot(
+                epochs, self.running_loss_by_egg_ct, label="Egg count loss"
+            )
+            self.plots[1].plot(
+                epochs, self.running_loss_by_pixel, label="Pixel-wise loss"
+            )
+            self.plots[1].legend()
 
         matplotlib.pyplot.pause(0.01)
         matplotlib.pyplot.tight_layout()

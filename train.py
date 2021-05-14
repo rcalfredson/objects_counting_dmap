@@ -32,7 +32,7 @@ matplotlib.use("TkAgg")
 
 DEFAULT_CONFIG_PATH = "./configs/default.json"
 
-# temp command: python trainByBatchLinux.py "-d egg-fullsize-pt-presample-compare-2021-03-23 -n FCRN_A -lr 0.00025 -e 300 -hf 0.5 -vf 0.5 --val_interval 2 -rot --plot --batch_size 4 --rand_samp_mult 20 --config /media/Synology3/Robert/objects_counting_dmap/configs/maeLossWithZoom_2021-05-04.json" --n_repeats 10
+# temp command: python trainByBatchLinux.py "-d egg-fullsize-pt-presample-compare-2021-03-23 -n FCRN_A -lr 0.00025 -e 300 -hf 0.5 -vf 0.5 --val_interval 2 -rot --plot --batch_size 4 --rand_samp_mult 20 --config /media/Synology3/Robert/objects_counting_dmap/configs/dualLossWithZoom_2021-05-13.json" --n_repeats 10
 
 def get_dataloader(
     dataset,
@@ -447,7 +447,7 @@ def train(
                     zoomMin=config["zoomMin"],
                     zoomMax=config["zoomMax"],
                     applyGaussian=True,
-                    debug=True,
+                    debug=False,
                 )
                 for i in range(patches[0].shape[0]):
                     validation_samples.append(
@@ -488,7 +488,7 @@ def train(
                     batch_size,
                     custom_collate=mode == "train",
                     apply_gaussian=True,
-                    debug=True,
+                    debug=False,
                 )
     else:
         load_train_val_sets()
