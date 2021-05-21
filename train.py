@@ -2,6 +2,7 @@
 import cv2
 from glob import glob
 import h5py
+from dual_loss_helper import set_dual_loss_defaults
 from randomSampler import RandomSampler
 from model import UNet, FCRN_A, FCRN_B
 from looper import Looper
@@ -32,7 +33,9 @@ matplotlib.use("TkAgg")
 
 DEFAULT_CONFIG_PATH = "./configs/default.json"
 
-# temp command: python trainByBatchLinux.py "-d egg-fullsize-pt-presample-compare-2021-03-23 -n FCRN_A -lr 0.00025 -e 300 -hf 0.5 -vf 0.5 --val_interval 2 -rot --plot --batch_size 4 --rand_samp_mult 20 --config /media/Synology3/Robert/objects_counting_dmap/configs/dualLossWithZoom_2021-05-13.json" --n_repeats 10
+# temp command: python trainByBatchWin.py "-d egg-fullsize-pt-presample-compare-2021-03-23 -n FCRN_A -lr 0.00025 -e 300 -hf 0.5 -vf 0.5 --val_interval 2 -rot --plot --batch_size 4 --rand_samp_mult 20 --config P:\Robert\objects_counting_dmap\configs\dualLossRandomChoice_0.80PixelWise_2021-05-21.json" --n_repeats 10
+
+# python trainByBatchLinux.py "-d egg-fullsize-pt-presample-compare-2021-03-23 -n FCRN_A -lr 0.00025 -e 300 -hf 0.5 -vf 0.5 --val_interval 2 -rot --plot --batch_size 4 --rand_samp_mult 20 --config /media/Synology3/Robert/objects_counting_dmap/configs/dualLossRandomChoice_0.80PixelWise_2021-05-21.json" --n_repeats 10
 
 def get_dataloader(
     dataset,
@@ -172,7 +175,7 @@ class FileNameHelper:
             self.existing_model = os.path.basename(self.existing_model).split(".pth")[0]
 
     def retrain_descriptor(self):
-        if self.existing_model is None or self.existing_model == '':
+        if self.existing_model is None or self.existing_model == "":
             return ""
 
         return f"_retrain_{self.existing_model}_"
@@ -367,6 +370,8 @@ def train(
     ):
         if not key in config:
             config[key] = config_default[key]
+    if config["loss"] == "dual":
+        config = set_dual_loss_defaults(config)
     if name_map:
         with open(name_map, "r") as f:
             name_map = json.load(f)
@@ -556,7 +561,7 @@ def train(
     train_looper = Looper(
         network,
         device,
-        config["loss"],
+        config,
         optimizer,
         dataloader["train"],
         len(dataset["train"]),
@@ -567,7 +572,7 @@ def train(
     valid_looper = Looper(
         network,
         device,
-        config["loss"],
+        config,
         optimizer,
         dataloader["valid"],
         len(dataset["valid"]),
@@ -594,9 +599,9 @@ def train(
         if i % val_interval == 0:
             # run validation epoch
             with torch.no_grad():
-                result = valid_looper.run()
+                result = valid_looper.run(i)
 
-            if lr_scheduler_opt == 'plateau':
+            if lr_scheduler_opt == "plateau":
                 lr_scheduler.step(result)
             else:
                 lr_scheduler.step()

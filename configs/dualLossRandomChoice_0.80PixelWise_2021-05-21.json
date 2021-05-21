@@ -1,0 +1,17 @@
+{
+    "rlrParams": {
+        "factor": 0.5,
+        "patience": 8
+    },
+    "sampleMode": "dynamic",
+    "skipEmpties": false,
+    "randomPatchSizes": false,
+    "zoomMin": 0.9,
+    "zoomMax": 1.1,
+    "loss": "dual",
+    "dualMode": "randomChoice",
+    "dualOptions": {
+        "period": 1,
+        "prob": 0.8
+    }
+}

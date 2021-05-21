@@ -1,5 +1,4 @@
 egg_source/*
-error_examples/*
 batch*/*
 egg*/*
 egg*[.pth,.png]
@@ -10,3 +9,5 @@ debug_imgs/*
 *.h5
 __pycache__/
 .vscode/*
+error_results*
+error_examples*

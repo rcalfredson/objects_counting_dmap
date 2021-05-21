@@ -1,14 +1,54 @@
 [
     [
-        "egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_Yang-Lab-Dell3_2021-05-05 20-07-58.834495_300epochs",
-        5.489794358252286
+        "egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_Yang-Lab-Dell8_2021-05-21 05-47-59.222263_300epochs",
+        3.3822910340221535
     ],
     [
-        "egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_Yang-Lab-Dell8_2021-05-06 03-25-33.220088_300epochs",
-        6.103316072423844
+        "egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_Yang-Lab-Dell8_2021-05-20 17-59-29.641564_300epochs",
+        4.068232098301063
     ],
     [
-        "egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_Yang-Lab-Dell8_2021-05-06 01-05-59.460457_300epochs",
-        6.458436591481901
+        "egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_Yang-Lab-Dell8_2021-05-20 20-21-27.095496_300epochs",
+        4.2751025228690205
+    ],
+    [
+        "egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_NZXT-U_2021-05-20 18-03-44.539095_300epochs",
+        5.074564101967495
+    ],
+    [
+        "egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_Yang-Lab-Dell8_2021-05-20 22-42-48.771145_300epochs",
+        5.516821726761224
+    ],
+    [
+        "egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_Yang-Lab-Dell3_2021-05-20 18-00-57.667942_300epochs",
+        5.977554425425828
+    ],
+    [
+        "egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_Yang-Lab-Dell3_2021-05-21 00-33-00.134948_300epochs",
+        6.290753746467734
+    ],
+    [
+        "egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_Yang-Lab-Dell4_2021-05-20 18-00-24.908422_300epochs",
+        6.437944387800589
+    ],
+    [
+        "egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_Yang-Lab-Dell8_2021-05-21 03-26-21.148236_300epochs",
+        6.6074741583941305
+    ],
+    [
+        "egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_Yang-Lab-Dell2_2021-05-20 17-57-09.990435_300epochs",
+        6.9749297037738405
+    ],
+    [
+        "egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_Yang-Lab-Dell4_2021-05-21 00-50-19.086042_300epochs",
+        8.705248120274694
+    ],
+    [
+        "egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_NZXT-U_2021-05-21 01-10-08.338280_300epochs",
+        8.987961957253846
+    ],
+    [
+        "egg-fullsize-pt-presample-compare-2021-03-23_FCRN_A_Yang-Lab-Dell8_2021-05-21 01-04-46.603225_300epochs",
+        9.089541292979128
     ]
 ]

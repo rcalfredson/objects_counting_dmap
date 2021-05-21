@@ -3,6 +3,7 @@ import cv2
 import h5py
 import numpy as np
 from skimage.feature import peak_local_max
+from PIL import Image
 import torch
 
 import base64
@@ -11,6 +12,7 @@ import glob
 import json
 import os
 from pathlib import Path
+import platform
 import random
 import string
 import timeit
@@ -138,8 +140,6 @@ class Predictor:
                     ground_truth_img = 255 * cv2.cvtColor(
                         imgAsNp[0].T, cv2.COLOR_BGR2RGB
                     )
-                    print("shape of color img:", ground_truth_img.shape)
-                    print("and grayscale:", grayscale_as_color.shape)
                     # find image with the smaller width.
                     img_list = [
                         grayscale_as_color,
@@ -163,19 +163,33 @@ class Predictor:
                                         )
                                     new_img[0 : img.shape[0], 0 : img.shape[1]] = img
                                     img_list[i] = new_img
-                    if dMapToShow.shape[1] >= dMapToShow.shape[0]:
-                        stacked_img = np.vstack(tuple(img_list))
-                    else:
-                        stacked_img = np.hstack(tuple(img_list))
+                    img_list[1] = Image.fromarray(img_list[1].astype(np.uint8))
+                    dMap_pil = Image.fromarray((img_list[0]*255).astype(np.uint8))
+                    dMap_pil.putalpha(dMap_pil.convert('L'))
+                    data = np.array(dMap_pil)
+                    red, green, blue, alpha = data.T
+                    # Replace white with red... (leaves alpha values alone...)
+                    white_areas = (red >0 ) | (blue > 0) | (green > 0)
+                    data[..., :-1][white_areas.T] = (0, 180, 0) # Transpose back needed
+                    dMap_pil = Image.fromarray(data)
+                    overlay_image = Image.alpha_composite(img_list[1].convert('RGBA'), dMap_pil)
+                    # print("shape of color img:", ground_truth_img.shape)
+                    # print("and grayscale:", grayscale_as_color.shape)
+                    # if dMapToShow.shape[1] >= dMapToShow.shape[0]:
+                    #     stacked_img = np.vstack(tuple(img_list))
+                    # else:
+                    #     stacked_img = np.hstack(tuple(img_list))
+
                     # cv2.imwrite(os.path.join('error_examples',
                     # '%s_%i_pred_%i_actual_img.png'%(exampleId, predicted_counts, true_counts)),
                     # 255*cv2.cvtColor(imgAsNp[0].T, cv2.COLOR_BGR2RGB))
                     # cv2.imwrite(os.path.join('error_examples',
                     # '%s_%i_pred_%i_actual_map.png'%(exampleId, predicted_counts, true_counts)),
                     # 255*dMapToShow)
+                    Path(f"error_examples_{platform.node()}").mkdir(parents=True, exist_ok=True)
                     cv2.imwrite(
                         os.path.join(
-                            "error_examples",
+                            f"error_examples_{platform.node()}",
                             "abs_%i_%s_%i_pred_%i_actual_%s.png"
                             % (
                                 np.round(abs(predicted_counts - true_counts)).astype(
@@ -187,7 +201,8 @@ class Predictor:
                                 os.path.basename(model_path),
                             ),
                         ),
-                        stacked_img,
+                        # stacked_img,
+                        np.array(overlay_image)
                     )
                 #     print('predicted: %i\tactual: %i'%(predicted_counts, true_counts))
                 #     cv2.imshow('image', cv2.cvtColor(imgAsNp[0].T, cv2.COLOR_BGR2RGB))
@@ -202,7 +217,8 @@ class Predictor:
         abs_rel_errors = np.divide(abs_diff, true_values)
         # print('absolute error:', abs_diff)
         # print('relative errors:', abs_rel_errors)
-        with open("error_results_%s.txt" % os.path.basename(model_path), "w") as myF:
+        Path(f"error_results_{platform.node()}").mkdir(parents=True, exist_ok=True)
+        with open(os.path.join(f"error_results_{platform.node()}", "error_results_%s.txt" % os.path.basename(model_path)), "w") as myF:
             myF.write(
                 "mean absolute error: {number:.{digits}f} ({number})\n".format(
                     number=np.mean(abs_diff), digits=3
@@ -288,7 +304,8 @@ class Predictor:
             "egg-eval-dorsa-wt_1",
             "egg-eval-robert-wt_1",
             "egg-eval-robert-wt_5",
-            "egg-eval-uli-root",
+            "egg-eval-robert-task-1",
+            "egg-eval-uli-task-1",
             "egg-fullsize-presample-compare-2021-03-22",
             "egg-eval-patch",
             "egg-eval-large-2021-01-26",

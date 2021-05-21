@@ -251,7 +251,7 @@ def generate_mall_data():
 
 def get_egg_image_paths(held_out=False):
     all_images = glob(
-        "egg_source/heldout_uli_WT_5%s/*_dots*" % ("" if held_out else "")
+        "egg_source/heldout_robert_task1%s/*_dots*" % ("" if held_out else "")
     )
     shuffle(all_images)
     return all_images
@@ -269,7 +269,7 @@ def generate_egg_heldout_data():
     all_images = get_egg_image_paths(held_out=True)
     in_channels = 3
     _, valid_h5 = create_hdf5(
-        "egg-eval-uli-root",
+        "egg-eval-robert-task-1",
         train_size=0,
         valid_size=None,
         img_size=(None, None),

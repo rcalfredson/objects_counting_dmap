@@ -3,6 +3,7 @@ from os import error
 from typing import Optional, List
 
 import cv2
+from dual_loss_helper import get_loss_weight_function
 import torch
 import numpy as np
 import matplotlib
@@ -17,7 +18,7 @@ class Looper:
         self,
         network: torch.nn.Module,
         device: torch.device,
-        loss_tp: str,
+        config: dict,
         optimizer: torch.optim.Optimizer,
         data_loader: torch.utils.data.DataLoader,
         dataset_size: int,
@@ -32,7 +33,7 @@ class Looper:
         Args:
             network: already initialized model
             device: a device model is working on
-            loss: the cost function
+            config: dict of settings for the training
             optimizer: already initialized optimizer link to network parameters
             data_loader: already initialized data loader
             dataset_size: no. of samples in dataset
@@ -42,7 +43,8 @@ class Looper:
         """
         self.network = network
         self.device = device
-        self.loss_tp = loss_tp
+        self.loss_tp = config["loss"]
+        self.config = config
         self.set_up_loss()
         self.optimizer = optimizer
         self.loader = data_loader
@@ -74,23 +76,29 @@ class Looper:
         if self.loss_tp == "mse":
             self.loss = torch.nn.MSELoss()
         elif self.loss_tp == "mae":
-
-            # def mean_abs_error_loss(abs_errors):
-            #     return torch.mean(abs_errors)
-
             self.loss = mean_abs_error_loss
         elif self.loss_tp == "dual":
+            self.coeffs = []
+            self.n_batches_since_reset = 0
             self.loss_mse = torch.nn.MSELoss()
+            self.loss_weight_fn = get_loss_weight_function(self.config)
 
-            def dual_loss(result, label):
-                loss_1 = mean_abs_error_loss(result, label)
-                loss_2 = self.loss_mse(result, label)
-                loss_sum = (0.5 * loss_1).add(loss_2 * 0.5)
+            def dual_loss(result, label, epoch_number):
+                if (
+                    self.n_batches_since_reset >= self.config["dualOptions"]["period"]
+                    or len(self.coeffs) == 0
+                ):
+                    self.coeffs = self.loss_weight_fn(epoch_number)
+                    self.n_batches_since_reset = 0
+                self.n_batches_since_reset += 1
+                loss_1 = self.loss_mse(result, label)
+                loss_2 = mean_abs_error_loss(result, label)
+                loss_sum = (self.coeffs[0] * loss_1).add(loss_2 * self.coeffs[1])
                 return loss_sum, loss_1, loss_2
 
             self.loss = dual_loss
 
-    def run(self, i=None):
+    def run(self, epoch_number: int):
         """Run a single epoch loop.
 
         Returns:
@@ -161,12 +169,13 @@ class Looper:
             if self.loss_tp != "dual":
                 loss = self.loss(result, label)
             else:
-                loss_results = self.loss(result, label)
+                loss_results = self.loss(result, label, epoch_number)
                 loss = loss_results[0]
-                self.running_loss_by_egg_ct[-1] += (
+                # not sure how to plot this.
+                self.running_loss_by_pixel[-1] += (
                     image.shape[0] * loss_results[1].item() / self.size
                 )
-                self.running_loss_by_pixel[-1] += (
+                self.running_loss_by_egg_ct[-1] += (
                     image.shape[0] * loss_results[2].item() / self.size
                 )
 
@@ -230,7 +239,11 @@ class Looper:
         self.plots[1].plot(
             epochs,
             self.running_loss,
+            "h-"
+            if self.loss_tp == "dual" and self.config["dualOptions"] == "flip"
+            else "-",
             label="Loss" if self.loss_tp == "dual" else None,
+            markersize=9,
         )
         if self.loss_tp == "dual":
             self.plots[1].plot(

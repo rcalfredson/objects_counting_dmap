@@ -1,50 +1,34 @@
 [
     [
-        "batch28-fcrn-small-dataset-gaussian-360-deg-rot-both-flips-low-patience\\egg_base_dir_errors",
-        6.6631620670351435
+        "batch34-fcrn-small-dataset-mae-loss-300epochs-start-from-batch30\\task5-robert-errors",
+        3.780929977769295
     ],
     [
-        "batch25-fcrn-small-dataset-gaussian-bndry-reflect\\egg_base_dir_errors",
-        6.8874205358826535
+        "batch43-fcrn-small-dataset-mae-300epchs-0.9to1.1RangeZoom\\task5-robert-errors",
+        3.8501358372285313
     ],
     [
-        "batch26-fcrn-small-dataset-gaussian-360-deg-rot-no_vert_flip\\egg_base_dir_errors",
-        6.955545155920759
+        "batch44-fcrn-small-dataset-mae-300epchs-0.85to1.15RangeZoom\\task5-robert-errors",
+        4.135873011154055
     ],
     [
-        "batch30-fcrn-small-dataset-mae-loss-function\\egg_base_dir_errors",
-        7.055053824978288
+        "batch45-fcrn-small-dataset-dualLossFunction-zoom0.9to1.1\\task5-robert-errors",
+        4.178042181207493
     ],
     [
-        "batch24-fcrn-small-dataset-dynamic-gaussian-last-redo\\egg_base_dir_errors",
-        7.151830375267435
+        "batch47-fcrn-small-dataset-switch-loss-pixel-wise-to-egg-count-at-150\\task5-robert-errors",
+        4.2962144739356285
     ],
     [
-        "batch33-fcrn-small-dataset-unet-backbone-mae-loss\\egg_base_dir_errors",
-        7.319741727723591
+        "batch40-fcrn-small-dataset-mae-300epchs-elastic-deform-redo\\task5-robert-errors",
+        5.0505700481643085
     ],
     [
-        "batch21-fcrn-small-dataset-dynamic-postfix-4\\egg_base_dir_errors",
-        7.322030801342523
+        "batch41-fcrn-small-dataset-mae-300epchs-elasdeform-sigma0\\task5-robert-errors",
+        5.130818089467943
     ],
     [
-        "batch22-fcrn-small-dataset-dynamic-short-epoch-5\\egg_base_dir_errors",
-        7.374614632585905
-    ],
-    [
-        "batch27-fcrn-small-dataset-gaussian-360-deg-rot-both_flips\\egg_base_dir_errors",
-        7.439312940610757
-    ],
-    [
-        "batch17-fcrn-small-dataset-presampling\\egg_base_dir_errors",
-        7.984900273656716
-    ],
-    [
-        "batch31-fcrn-small-dataset-mae-squared-loss-function\\egg_base_dir_errors",
-        9.037675534578193
-    ],
-    [
-        "batch29-fcrn-small-dataset-gaussian-no-rot\\egg_base_dir_errors",
-        9.207369679694622
+        "batch46-fcrn-small-dataset-pixel-wise-loss-function\\task5-robert-errors",
+        5.466309172126213
     ]
 ]

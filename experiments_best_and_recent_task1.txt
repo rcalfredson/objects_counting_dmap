@@ -1,0 +1,8 @@
+batch34-fcrn-small-dataset-mae-loss-300epochs-start-from-batch30
+batch40-fcrn-small-dataset-mae-300epchs-elastic-deform-redo
+batch41-fcrn-small-dataset-mae-300epchs-elasdeform-sigma0
+batch43-fcrn-small-dataset-mae-300epchs-0.9to1.1RangeZoom
+batch44-fcrn-small-dataset-mae-300epchs-0.85to1.15RangeZoom
+batch45-fcrn-small-dataset-dualLossFunction-zoom0.9to1.1
+batch47-fcrn-small-dataset-switch-loss-pixel-wise-to-egg-count-at-150
+batch46-fcrn-small-dataset-pixel-wise-loss-function
