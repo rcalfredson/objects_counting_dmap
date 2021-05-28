@@ -45,6 +45,7 @@ class Looper:
         self.device = device
         self.loss_tp = config["loss"]
         self.config = config
+        self.should_quit_early = False
         self.set_up_loss()
         self.optimizer = optimizer
         self.loader = data_loader
@@ -55,6 +56,7 @@ class Looper:
             self.running_loss_by_pixel = []
             self.running_loss_by_egg_ct = []
         self.running_mean_abs_err = []
+        self.mean_abs_err_ylim_max = 2
         if plots is not None:
             assert (
                 left_col_plots is not None
@@ -70,7 +72,11 @@ class Looper:
             errors = []
             for true, predicted in zip(label, result):
                 actual = torch.sum(true)
-                errors.append(torch.abs(actual - torch.sum(predicted)) / 100 / 4 / 5)
+                errors.append(
+                    torch.abs(actual - torch.sum(predicted))
+                    / 100
+                    / self.config["maeLossDivisor"]
+                )
             return torch.mean(torch.stack(errors))
 
         if self.loss_tp == "mse":
@@ -83,12 +89,12 @@ class Looper:
             self.loss_mse = torch.nn.MSELoss()
             self.loss_weight_fn = get_loss_weight_function(self.config)
 
-            def dual_loss(result, label, epoch_number):
+            def dual_loss(result, label):
                 if (
                     self.n_batches_since_reset >= self.config["dualOptions"]["period"]
                     or len(self.coeffs) == 0
                 ):
-                    self.coeffs = self.loss_weight_fn(epoch_number)
+                    self.coeffs = self.loss_weight_fn(self.epoch_number)
                     self.n_batches_since_reset = 0
                 self.n_batches_since_reset += 1
                 loss_1 = self.loss_mse(result, label)
@@ -111,6 +117,7 @@ class Looper:
         self.abs_err = []
         self.mean_err = []
         self.running_loss.append(0)
+        self.epoch_number = epoch_number
         if self.loss_tp == "dual":
             self.running_loss_by_pixel.append(0)
             self.running_loss_by_egg_ct.append(0)
@@ -169,7 +176,7 @@ class Looper:
             if self.loss_tp != "dual":
                 loss = self.loss(result, label)
             else:
-                loss_results = self.loss(result, label, epoch_number)
+                loss_results = self.loss(result, label)
                 loss = loss_results[0]
                 # not sure how to plot this.
                 self.running_loss_by_pixel[-1] += (
@@ -188,6 +195,17 @@ class Looper:
 
         # calculate errors and standard deviation
         self.update_errors()
+
+        if (
+            not self.validation
+            and self.config["abandonDivergentTraining"]
+            and self.epoch_number + 1 == self.config["minNumEpochs"]
+            and not np.any(
+                np.asarray(self.running_mean_abs_err) <= self.mean_abs_err_ylim_max
+            )
+        ):
+            self.should_quit_early = True
+            return
 
         # update live plot
         if self.plots is not None:
@@ -219,6 +237,10 @@ class Looper:
         self.plots[0].cla()
         self.plots[0].set_title("Train" if not self.validation else "Valid")
 
+        # does it make sense that the test only occurs once? Yes, I think so.
+        # If the threshold has been crossed by that point, we keep going, and if not,
+        # we exit; in that sense, it's pretty simple.
+
         if self.left_col_plots == "scatter":
             self.plots[0].set_xlabel("True value")
             self.plots[0].set_ylabel("Predicted value")
@@ -227,7 +249,7 @@ class Looper:
         elif self.left_col_plots == "mae":
             self.plots[0].set_xlabel("Epoch")
             self.plots[0].set_ylabel("Mean absolute error")
-            self.plots[0].set_ylim((0, 2))
+            self.plots[0].set_ylim((0, self.mean_abs_err_ylim_max))
             self.plots[0].plot(epochs, self.running_mean_abs_err)
 
         # loss

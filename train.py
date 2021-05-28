@@ -35,7 +35,8 @@ DEFAULT_CONFIG_PATH = "./configs/default.json"
 
 # temp command: python trainByBatchWin.py "-d egg-fullsize-pt-presample-compare-2021-03-23 -n FCRN_A -lr 0.00025 -e 300 -hf 0.5 -vf 0.5 --val_interval 2 -rot --plot --batch_size 4 --rand_samp_mult 20 --config P:\Robert\objects_counting_dmap\configs\dualLossRandomChoice_0.80PixelWise_2021-05-21.json" --n_repeats 10
 
-# python trainByBatchLinux.py "-d egg-fullsize-pt-presample-compare-2021-03-23 -n FCRN_A -lr 0.00025 -e 300 -hf 0.5 -vf 0.5 --val_interval 2 -rot --plot --batch_size 4 --rand_samp_mult 20 --config /media/Synology3/Robert/objects_counting_dmap/configs/dualLossRandomChoice_0.80PixelWise_2021-05-21.json" --n_repeats 10
+# python trainByBatchLinux.py "-d egg-fullsize-pt-presample-compare-2021-03-23 -n FCRN_A -lr 0.00025 -e 300 -hf 0.5 -vf 0.5 --val_interval 2 -rot --plot --batch_size 4 --rand_samp_mult 20 --config /media/Synology3/Robert/objects_counting_dmap/configs/dualLossRC_0.80PixelWise_maeLossDiv_2021-05-24.json" --n_repeats 10
+
 
 def get_dataloader(
     dataset,
@@ -367,6 +368,9 @@ def train(
         "zoomMax",
         "sampleMode",
         "loss",
+        "maeLossDivisor",
+        "abandonDivergentTraining",
+        "minNumEpochs",
     ):
         if not key in config:
             config[key] = config_default[key]
@@ -595,6 +599,10 @@ def train(
 
         # run training epoch and update learning rate
         train_looper.run(i)
+        if train_looper.should_quit_early:
+            lr_history['early_exit_epoch_num'] = i + 1
+            write_lr_history()
+            os.kill(os.getpid(), signal.SIGTERM)
 
         if i % val_interval == 0:
             # run validation epoch

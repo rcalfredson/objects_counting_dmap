@@ -4,5 +4,8 @@
     "zoomMin": null,
     "zoomMax": null,
     "sampleMode": "pre",
-    "loss": "mse"
+    "loss": "mse",
+    "maeLossDivisor": 20,
+    "abandonDivergentTraining": false,
+    "minNumEpochs": 10
 }

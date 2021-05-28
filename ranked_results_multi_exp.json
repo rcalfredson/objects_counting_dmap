@@ -1,34 +1,10 @@
 [
     [
-        "batch34-fcrn-small-dataset-mae-loss-300epochs-start-from-batch30\\task5-robert-errors",
-        3.780929977769295
-    ],
-    [
-        "batch43-fcrn-small-dataset-mae-300epchs-0.9to1.1RangeZoom\\task5-robert-errors",
+        "batch43-fcrn-small-dataset-mae-300epchs-0.9to1.1RangeZoom",
         3.8501358372285313
     ],
     [
-        "batch44-fcrn-small-dataset-mae-300epchs-0.85to1.15RangeZoom\\task5-robert-errors",
-        4.135873011154055
-    ],
-    [
-        "batch45-fcrn-small-dataset-dualLossFunction-zoom0.9to1.1\\task5-robert-errors",
-        4.178042181207493
-    ],
-    [
-        "batch47-fcrn-small-dataset-switch-loss-pixel-wise-to-egg-count-at-150\\task5-robert-errors",
-        4.2962144739356285
-    ],
-    [
-        "batch40-fcrn-small-dataset-mae-300epchs-elastic-deform-redo\\task5-robert-errors",
-        5.0505700481643085
-    ],
-    [
-        "batch41-fcrn-small-dataset-mae-300epchs-elasdeform-sigma0\\task5-robert-errors",
-        5.130818089467943
-    ],
-    [
-        "batch46-fcrn-small-dataset-pixel-wise-loss-function\\task5-robert-errors",
-        5.466309172126213
+        "batch49-fcrn-small-dataset-randomChoice-0.8pixelWise-0.2countWise",
+        4.711800779582939
     ]
 ]
