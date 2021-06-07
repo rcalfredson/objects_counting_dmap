@@ -1,0 +1,2 @@
+
+batch43-fcrn-small-dataset-mae-300epchs-0.9to1.1RangeZoom

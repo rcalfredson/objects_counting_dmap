@@ -4,7 +4,9 @@ import random
 import scipy.stats as st
 import sys
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+sys.path.append(
+    os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+)
 from util import p2stars
 
 WELCH = True
@@ -16,6 +18,15 @@ def ttest_rel(a, b, msg=None, min_n=2):
 
 def ttest_ind(a, b, msg=None, min_n=2):
     return ttest(a, b, False, msg, min_n)
+
+def toFinite(a): return a[np.isfinite(a)]
+
+def meanConfInt(a, conf=0.95, asDelta=False):
+    a = toFinite(np.array(a))
+    n = len(a)
+    mean = np.mean(a) if n else np.nan
+    d = st.t.ppf((1 + conf) / 2.0, n - 1) * st.sem(a) if n > 1 else np.nan
+    return (mean, d, n) if asDelta else (mean, mean - d, mean + d, n)
 
 
 def ttest(a, b, paired, msg=None, min_n=2):

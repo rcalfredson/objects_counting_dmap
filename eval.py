@@ -117,8 +117,13 @@ class Predictor:
                 # print('base64:', b64_img_str)
                 true_values.append(true_counts)
                 predicted_values.append(predicted_counts)
-                assert b64_img_str not in errors_by_base64str
-                errors_by_base64str[b64_img_str] = abs(true_counts - predicted_counts)
+                # assert b64_img_str not in errors_by_base64str
+                errors_by_base64str[b64_img_str] = {
+                    "predicted": predicted_counts,
+                    "true": true_counts,
+                    "abs_error": abs(true_counts - predicted_counts),
+                }
+
                 # if abs(true_counts - predicted_counts) > 30:
                 # pass
                 exampleId = randID()
@@ -164,15 +169,17 @@ class Predictor:
                                     new_img[0 : img.shape[0], 0 : img.shape[1]] = img
                                     img_list[i] = new_img
                     img_list[1] = Image.fromarray(img_list[1].astype(np.uint8))
-                    dMap_pil = Image.fromarray((img_list[0]*255).astype(np.uint8))
-                    dMap_pil.putalpha(dMap_pil.convert('L'))
+                    dMap_pil = Image.fromarray((img_list[0] * 255).astype(np.uint8))
+                    dMap_pil.putalpha(dMap_pil.convert("L"))
                     data = np.array(dMap_pil)
                     red, green, blue, alpha = data.T
                     # Replace white with red... (leaves alpha values alone...)
-                    white_areas = (red >0 ) | (blue > 0) | (green > 0)
-                    data[..., :-1][white_areas.T] = (0, 180, 0) # Transpose back needed
+                    white_areas = (red > 0) | (blue > 0) | (green > 0)
+                    data[..., :-1][white_areas.T] = (0, 180, 0)  # Transpose back needed
                     dMap_pil = Image.fromarray(data)
-                    overlay_image = Image.alpha_composite(img_list[1].convert('RGBA'), dMap_pil)
+                    overlay_image = Image.alpha_composite(
+                        img_list[1].convert("RGBA"), dMap_pil
+                    )
                     # print("shape of color img:", ground_truth_img.shape)
                     # print("and grayscale:", grayscale_as_color.shape)
                     # if dMapToShow.shape[1] >= dMapToShow.shape[0]:
@@ -186,7 +193,9 @@ class Predictor:
                     # cv2.imwrite(os.path.join('error_examples',
                     # '%s_%i_pred_%i_actual_map.png'%(exampleId, predicted_counts, true_counts)),
                     # 255*dMapToShow)
-                    Path(f"error_examples_{platform.node()}").mkdir(parents=True, exist_ok=True)
+                    Path(f"error_examples_{platform.node()}").mkdir(
+                        parents=True, exist_ok=True
+                    )
                     cv2.imwrite(
                         os.path.join(
                             f"error_examples_{platform.node()}",
@@ -202,7 +211,7 @@ class Predictor:
                             ),
                         ),
                         # stacked_img,
-                        np.array(overlay_image)
+                        np.array(overlay_image),
                     )
                 #     print('predicted: %i\tactual: %i'%(predicted_counts, true_counts))
                 #     cv2.imshow('image', cv2.cvtColor(imgAsNp[0].T, cv2.COLOR_BGR2RGB))
@@ -218,7 +227,13 @@ class Predictor:
         # print('absolute error:', abs_diff)
         # print('relative errors:', abs_rel_errors)
         Path(f"error_results_{platform.node()}").mkdir(parents=True, exist_ok=True)
-        with open(os.path.join(f"error_results_{platform.node()}", "error_results_%s.txt" % os.path.basename(model_path)), "w") as myF:
+        with open(
+            os.path.join(
+                f"error_results_{platform.node()}",
+                "error_results_%s.txt" % os.path.basename(model_path),
+            ),
+            "w",
+        ) as myF:
             myF.write(
                 "mean absolute error: {number:.{digits}f} ({number})\n".format(
                     number=np.mean(abs_diff), digits=3
@@ -273,7 +288,8 @@ class Predictor:
                 )
             )
         with open(
-            "error_examples/errors_%s.json" % os.path.basename(model_path), "w"
+            f"error_results_{platform.node()}/errors_{os.path.basename(model_path)}.json",
+            "w",
         ) as myF:
             json.dump(errors_by_base64str, myF, ensure_ascii=False, indent=4)
 

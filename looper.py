@@ -79,6 +79,12 @@ class Looper:
                 )
             return torch.mean(torch.stack(errors))
 
+        def mse_false_pos_penalty_loss(result, label):
+            diffs = result - label
+            coeffs = torch.where(diffs > 0, 1., 1.)
+            scaled_diffs = torch.mul(diffs, coeffs)
+            return (scaled_diffs**2).mean()
+
         if self.loss_tp == "mse":
             self.loss = torch.nn.MSELoss()
         elif self.loss_tp == "mae":
@@ -86,7 +92,8 @@ class Looper:
         elif self.loss_tp == "dual":
             self.coeffs = []
             self.n_batches_since_reset = 0
-            self.loss_mse = torch.nn.MSELoss()
+            # self.loss_mse = torch.nn.MSELoss()
+            self.loss_mse = mse_false_pos_penalty_loss
             self.loss_weight_fn = get_loss_weight_function(self.config)
 
             def dual_loss(result, label):
@@ -236,10 +243,6 @@ class Looper:
         epochs = np.arange(1, len(self.running_loss) + 1)
         self.plots[0].cla()
         self.plots[0].set_title("Train" if not self.validation else "Valid")
-
-        # does it make sense that the test only occurs once? Yes, I think so.
-        # If the threshold has been crossed by that point, we keep going, and if not,
-        # we exit; in that sense, it's pretty simple.
 
         if self.left_col_plots == "scatter":
             self.plots[0].set_xlabel("True value")
