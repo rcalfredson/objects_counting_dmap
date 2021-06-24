@@ -11,3 +11,4 @@ __pycache__/
 .vscode/*
 error_results*
 error_examples*
+Thumbs.db

@@ -1,5 +1,6 @@
 import argparse
 from collections import Counter
+from ntpath import join
 import dabest
 from glob import glob
 import json
@@ -32,6 +33,13 @@ parser.add_argument(
 )
 
 parser.add_argument(
+    "error_subdirs",
+    nargs="*",
+    help="Space-separated list of sub-folders from which to load precalculated errors"
+    " which get combined are are then used in ranking the nets.",
+)
+
+parser.add_argument(
     "results_subdir",
     help="Sub-folder inside experiment directories where the script should"
     " seek out JSON results files",
@@ -40,6 +48,8 @@ parser.add_argument(
 parser.add_argument("n", help="Number of sample sets to generate", type=int)
 
 opts = parser.parse_args()
+
+print(f"Opts values: {opts.exp_list}, {opts.error_subdirs}, {opts.results_subdir}, {opts.n}")
 
 
 def copy_figure(fig):
@@ -108,28 +118,33 @@ for i in range(opts.n * 2):
     # input()
     weighted_errors_by_net = {}
     for net in sample:
-        split_path = os.path.normpath(net).split(os.sep)
+        split_path = os.path.abspath(net).split(os.sep)
         net_name = net_names[net]
         # print("net name:", net_name)
         if net_name in weighted_errors_by_net:
             continue
         if net_name not in net_name_to_file:
             net_name_to_file[net_name] = net
-        error_record = os.path.join(split_path[0], f"error_results_{net_name}.txt")
-        assert os.path.isfile(
-            error_record
-        ), f"Could not find error record for {error_record}"
+        weighted_errors_for_net = []
+        for j, err_dir in enumerate(opts.error_subdirs):
+            if j == 0:
+                split_path[0] += '\\'
+            error_record = os.path.join(*split_path[:-2], err_dir, f"error_results_{net_name}.txt")
+            assert os.path.isfile(
+                error_record
+            ), f"Could not find error record for {error_record}"
         # how to find the best nets?
         # need to calculate the weighted error for each one.
-        err_manager = ErrorManager([split_path[0]], analyze_by_wt_avg=True)
-        err_manager.process_single_error(0, error_record, None)
+            err_manager = ErrorManager([os.path.join(split_path[0], err_dir)], analyze_by_wt_avg=True)
+            err_manager.process_single_error(0, error_record, None)
+            weighted_errors_for_net.append(list(err_manager.avgErrsByNet[0].values())[0])
         # print("net name:", net_name)
-        weighted_errors_by_net[net_name] = list(err_manager.avgErrsByNet[0].values())[0]
+        weighted_errors_by_net[net_name] = np.mean(weighted_errors_for_net)
     sorted_nets = dict(sorted(weighted_errors_by_net.items(), key=lambda item: item[1]))
     # print("sorted nets:", sorted_nets)
     sorted_net_ks = list(sorted_nets.keys())
     if i % 2 == 0:
-        group = sorted_net_ks[:int(len(sorted_net_ks) / 2)]
+        group = sorted_net_ks[:]#int(len(sorted_net_ks) / 2):]
         key = "top_50_pct"
     else:
         group = sorted_net_ks[:3]
@@ -139,7 +154,7 @@ for i in range(opts.n * 2):
 
     predictions = {}
     for i, res_file in enumerate([net_name_to_file[net] for net in group]):
-        with open(res_file) as f:
+        with open(os.path.abspath(res_file)) as f:
             results = json.load(f)
             for k in results:
                 if len(ground_truth_counts) < len(results):
@@ -215,7 +230,7 @@ for i, keys in enumerate(error_keys):
         {
             "Error": stacked_errs,
             "Group": ["Top 3 nets"] * len(top_3_errs)
-            + ["Top 50% of nets"] * len(top_50_errs),
+            + ["All nets"] * len(top_50_errs),
         },
         columns=["Group", "Error"],
     )
@@ -227,7 +242,7 @@ for i, keys in enumerate(error_keys):
                 err_df["Error"][int(len(err_df["Error"]) / 2) :],
             ]
         ).T,
-        columns=["Top 3 nets", "Top 50% of nets"],
+        columns=["Top 3 nets", "All nets"],
     )
     print("dabest df?", dabest_df)
     print(
@@ -239,19 +254,19 @@ for i, keys in enumerate(error_keys):
     )
     print("end")
 
-    error_dabest = dabest.load(dabest_df, idx=("Top 3 nets", "Top 50% of nets"))
+    error_dabest = dabest.load(dabest_df, idx=("Top 3 nets", "All nets"))
     fig = error_dabest.mean_diff.plot(fig_size=(9, 6))
     mean_diff_dist = plt.subplot(132)
     # print("err dist", mean_diff_dist)
     plt.subplot(131)
 
-    plt.suptitle(f'Difference in {error_titles[i]}')
+    plt.suptitle(f"Difference in {error_titles[i]}")
     # fig, ax = plt.subplots(1, 2, figsize=(8, 5))
     # plt.axes(ax[0])
     sinaplot(x="Group", y="Error", data=err_df)
     fig.delaxes(fig.axes[1])
-    fig.axes[0].change_geometry(1,2,2)
-    fig.axes[1].change_geometry(1,2,1)
+    fig.axes[0].change_geometry(1, 2, 2)
+    fig.axes[1].change_geometry(1, 2, 1)
     # plt.tight_layout()
     # fig = plt.subplot(121)
     # plt.axes(ax[1])

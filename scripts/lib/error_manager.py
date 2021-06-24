@@ -42,7 +42,7 @@ class ErrorManager:
     def process_single_error(self, i, error_filename, outliers_for_dir):
         if outliers_for_dir and os.path.basename(error_filename) in outliers_for_dir:
             return
-        with open(error_filename, "r") as f:
+        with open(os.path.abspath(error_filename), "r") as f:
             single_net_errors = f.read().splitlines()
             if self.analyze_by_wt_avg:
                 self.categorized_errors = {k: 0 for k in self.error_categories}
